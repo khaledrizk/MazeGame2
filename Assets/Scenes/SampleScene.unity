@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
+  bulletSpawner: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!4 &24372110
 Transform:
   m_ObjectHideFlags: 0
@@ -307,7 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 568166592}
   m_Layer: 0
-  m_Name: BulletSpawner
+  m_Name: bulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,6 +339,7 @@ GameObject:
   - component: {fileID: 876120497}
   - component: {fileID: 876120496}
   - component: {fileID: 876120495}
+  - component: {fileID: 876120498}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -412,6 +415,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876120493}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &876120498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876120493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc07ddf44e33141a6d9a9d1371d60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  bulletSpawner: {fileID: 568166591}
+  bullet: {fileID: 1311196750072710, guid: 31d1db1f4fd0f714bb4ec7cbdc8a4c0a, type: 2}
 --- !u!1 &879289915
 GameObject:
   m_ObjectHideFlags: 0
