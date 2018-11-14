@@ -9,6 +9,10 @@ public class Bullet : MonoBehaviour {
 	 
 	 
 	 private float timePassed = 0.0f;
+
+     private float damage = 1.0f;
+
+     private GameObject triggerEnemy;
 	
 	
 	// Functions
@@ -22,4 +26,14 @@ public class Bullet : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            triggerEnemy = other.gameObject;
+            triggerEnemy.GetComponent<Enemy>().health -= damage;
+            Destroy(this.gameObject);
+        }
+    }
 }
